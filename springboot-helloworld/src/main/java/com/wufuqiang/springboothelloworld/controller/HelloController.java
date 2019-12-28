@@ -22,8 +22,15 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(){
-//        return "Hello "+name;
+//        System.out.println("Hello "+name);
+//        return "Hello " + name;
         return person.toString();
+    }
+
+    @RequestMapping("/value")
+    public String value(){
+        System.out.println("Hello "+name);
+        return "Hello " + name;
     }
 
     @RequestMapping("/success")

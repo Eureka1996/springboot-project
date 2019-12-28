@@ -1,15 +1,16 @@
 server:
   port: 8081
 
-#spring:
-#  profiles:
-#    active: dev
+#激活对应的配置环境
+spring:
+  profiles:
+    active: dev
 
-#dagname: bigdogdog
+dag.name: bigdogdog
 
 person:
-  lastName: 吴福强
-  age: 120
+  lastName: 吴福强-${random.uuid}
+  age: ${random.int(1,120)}
   boss: false
   birth: 2019/10/10
   maps:
@@ -20,19 +21,18 @@ person:
     - list2
     - list3
   dog:
-    name: 小狗
+    name: ${dog.name:小花狗}
     age: 2
 
-#logging:
-#  level:
-#    com:
-#      wufuqiang: trace
+logging:
+  level:
+    com:
+      wufuqiang: trace
 
-#---
-#
-#server:
-#  port: 8083
-#
-#spring:
-#  profiles: dev
+---
+server:
+  port: 8083
+
+spring:
+  profiles: dev
 
