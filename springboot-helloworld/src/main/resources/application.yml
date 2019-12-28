@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+
+dagname: bigdogdog
+
+#person:
+#  lastName: 吴福强${random.uuid}
+#  age: ${random.int[1,120]}
+#  boss: false
+#  birth: 2019/10/10
+#  maps:
+#    mapk1: mapv1
+#    mapk2: mapv2
+#  lists:
+#    - list1
+#    - list2
+#    - list3
+#  dog:
+#    name: ${dagname:xiaohong}
+#    age: 2
+
+logging:
+  level:
+    com:
+      wufuqiang: trace
+
+---
+
+server:
+  port: 8083
+
+spring:
+  profiles: dev
+

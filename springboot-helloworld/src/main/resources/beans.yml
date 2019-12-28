@@ -1,0 +1,15 @@
+person:
+  lastName: 小吴
+  age: 20
+  boss: true
+  birth: 2019/10/10
+  maps:
+    mapk1: mapv1
+    mapk2: mapv2
+  lists:
+    - list1
+    - list2
+    - list3
+  dog:
+    name: xiaohua
+    age: 2
