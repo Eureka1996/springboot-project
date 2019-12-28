@@ -6,11 +6,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.Map;
 
-@Controller
+@RestController
 public class HelloController {
 
     @Autowired
@@ -19,11 +20,10 @@ public class HelloController {
     @Value("${person.lastName:默认值}")
     String name;
 
-    @ResponseBody
     @RequestMapping("/hello")
     public String hello(){
-        return "Hello "+name;
-//        return person.toString();
+//        return "Hello "+name;
+        return person.toString();
     }
 
     @RequestMapping("/success")

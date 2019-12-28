@@ -14,6 +14,11 @@
     <name>springboot-project</name>
     <description>Demo project for Spring Boot</description>
 
+    <modules>
+        <module>springboot-helloworld</module>
+        <module>springboot-web</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>

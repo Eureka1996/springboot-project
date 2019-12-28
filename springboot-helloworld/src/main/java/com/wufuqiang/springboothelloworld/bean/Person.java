@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-@PropertySource(value={"classpath:beans.yml"})
+//@PropertySource(value={"classpath:beans.yml"})
 @Component
 @ConfigurationProperties(prefix = "person")
 public class Person {
