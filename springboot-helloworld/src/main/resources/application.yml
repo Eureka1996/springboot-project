@@ -2,9 +2,9 @@ server:
   port: 8081
 
 #激活对应的配置环境
-spring:
-  profiles:
-    active: dev
+#spring:
+#  profiles:
+#    active: dev
 
 dag.name: bigdogdog
 
@@ -27,7 +27,7 @@ person:
 logging:
   level:
     com:
-      wufuqiang: trace
+      wufuqiang: warn
 
 ---
 server:
