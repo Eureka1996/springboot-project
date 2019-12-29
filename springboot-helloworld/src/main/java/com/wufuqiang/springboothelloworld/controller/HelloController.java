@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Arrays;
 import java.util.Map;
 
-@RestController
+@Controller
 public class HelloController {
 
     @Autowired
@@ -20,6 +20,7 @@ public class HelloController {
     @Value("${person.lastName:默认值}")
     String name;
 
+    @ResponseBody
     @RequestMapping("/hello")
     public String hello(){
 //        System.out.println("Hello "+name);
@@ -27,6 +28,7 @@ public class HelloController {
         return person.toString();
     }
 
+    @ResponseBody
     @RequestMapping("/value")
     public String value(){
         System.out.println("Hello "+name);
@@ -37,7 +39,7 @@ public class HelloController {
     public String success(Map<String,Object> map){
         map.put("name","<h1>wufuqiang</h1>");
         map.put("users", Arrays.asList("wfq","Mr. Wu"));
-        return "SUCCESS";
+        return "success";
     }
 
 }
