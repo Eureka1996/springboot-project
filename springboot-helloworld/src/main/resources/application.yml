@@ -27,7 +27,7 @@ person:
 logging:
   level:
     com:
-      wufuqiang: warn
+      wufuqiang: debug
 
 ---
 server:
