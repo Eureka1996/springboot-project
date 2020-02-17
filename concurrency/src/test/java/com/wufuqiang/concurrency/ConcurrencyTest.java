@@ -26,8 +26,6 @@ public class ConcurrencyTest {
         Semaphore semaphore = new Semaphore(threadTotal);
         CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
         for ( int i = 0 ; i < clientTotal;i++){
-
-
             service.execute(()->{
                 try {
                     semaphore.acquire();
